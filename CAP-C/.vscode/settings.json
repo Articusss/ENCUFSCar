@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "1061.C": "cpp",
+        "stdio.h": "c",
+        "1011.C": "cpp",
+        "1015.C": "cpp",
+        "PROGRAMA ADAPTADO A PROVA.C": "cpp",
+        "stdlib.h": "c"
+    }
+}

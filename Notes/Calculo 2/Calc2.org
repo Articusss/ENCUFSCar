@@ -1,0 +1,40 @@
+#+STARTUP: indent
+#+STARTUP: overview
+#+STARTUP: show2levels
+#+TITLE: Cálculo 2
+#+SUBTITLE: /Anotações Práticas/
+#+AUTHOR: Vinicius Faria
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letterpaper]
+#+OPTIONS: toc:t
+#+SETUPFILE: /home/artixs/codigos/ENCUFSCar/Notes/startup.setup
+
+* Funções Vetoriais
+Funções cuja imagem gerada é um vetor. $\realbb{R}^2 \ e \ \realbb{R}^3$ são chamadas *funções coordenadas* e t é denominado *variável livre*
+
+\begin{center}   $\alpha(t) = (2t+1, 1-t)$ \end{center}
+
+** Esboço de curvas
+ Para esboçar curvas, isolar o x e y (e potencialmente z) em função de t, formando a imagem da curva. A curva abaixo descreve um círculo.
+
+\begin{center} $\begin{cases} x(t) = \sin (t) \\ y(t) = \cos(t) \end{cases}$ \end{center}
+
+** Equações paramétricas de retas
+Dado uma curva que passa por A e B, é possível definir sua função utilizando:
+
+ \begin{center} $\alpha (t) = (1-t)A + tB = A + t(B-A)$ \end{center}
+
+Interpretação geométrica: parametrização da reta que contém o ponto A e é parelela ao vetor não nulo (B-A)
+
+** Parametrizações
+Uma função vetorial é uma _parametrização_ da curva que é a imagem da função. Uma curva pode ser parametrizada de várias maneiras, como círculos.
+
+** Limites e Continuidade
+Resumidamente, para calcular limites de funções vetoriais, basta calcular o limite de cada função de coordenada separadamente.
+
+Da mesma forma, para verificar a continuidade da função vetorial, basta conferir que todas as funções de coordenadas sejam contínuas.
+
+*OBS:* Uma função é contínua quando em seu domínio:
+  + Não possui assíntotas verticais
+  + Não possui "furos"
+  + Não possui "pulos"

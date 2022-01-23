@@ -1,0 +1,89 @@
+% Created 2022-01-23 dom 20:53
+% Intended LaTeX compiler: pdflatex
+\documentclass[letterpaper, 11pt]{article}
+                      \usepackage{lmodern} % Ensures we have the right font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[table, xcdraw]{xcolor}
+\definecolor{bblue}{HTML}{0645AD}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{colorlinks, linkcolor=blue, urlcolor=bblue}
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage[stretch=10]{microtype}
+\usepackage{hyphenat}
+\usepackage{ragged2e}
+\usepackage{subfig} % Subfigures (not needed in Org I think)
+\usepackage{hyperref} % Links
+\usepackage{listings} % Code highlighting
+\usepackage[top=1in, bottom=1.25in, left=1.55in, right=1.55in]{geometry}
+\renewcommand{\baselinestretch}{1.15}
+\usepackage[explicit]{titlesec}
+\pretitle{\begin{center}\fontsize{20pt}{20pt}\selectfont}
+\posttitle{\par\end{center}}
+\preauthor{\begin{center}\vspace{-6bp}\fontsize{14pt}{14pt}\selectfont}
+\postauthor{\par\end{center}\vspace{-25bp}}
+\predate{\begin{center}\fontsize{12pt}{12pt}\selectfont}
+\postdate{\par\end{center}\vspace{0em}}
+\titlespacing\section{0pt}{5pt}{5pt} % left margin, space before section header, space after section header
+\titlespacing\subsection{0pt}{5pt}{-2pt} % left margin, space before subsection header, space after subsection header
+\titlespacing\subsubsection{0pt}{5pt}{-2pt} % left margin, space before subsection header, space after subsection header
+\usepackage{enumitem}
+\setlist{itemsep=-2pt} % or \setlist{noitemsep} to leave space around whole list
+\author{Vinicius Faria}
+\date{\today}
+\title{Cálculo 2\\\medskip
+\large \emph{Anotações Práticas}}
+\hypersetup{
+ pdfauthor={Vinicius Faria},
+ pdftitle={Cálculo 2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Funções Vetoriais}
+\label{sec:org5b359d6}
+Funções cuja imagem gerada é um vetor. \(\realbb{R}^2 \ e \ \realbb{R}^3\) são chamadas \textbf{funções coordenadas} e t é denominado \textbf{variável livre}
+
+\begin{center}   $\alpha(t) = (2t+1, 1-t)$ \end{center}
+
+\subsection{Esboço de curvas}
+\label{sec:orga7ec006}
+Para esboçar curvas, isolar o x e y (e potencialmente z) em função de t, formando a imagem da curva. A curva abaixo descreve um círculo.
+
+\begin{center} $\begin{cases} x(t) = \sin (t) \\ y(t) = \cos(t) \end{cases}$ \end{center}
+
+\subsection{Equações paramétricas de retas}
+\label{sec:org372332e}
+Dado uma curva que passa por A e B, é possível definir sua função utilizando:
+\begin{center} $\alpha (t) = (1-t)A + tB = A + t(B-A)$ \end{center}
+
+Interpretação geométrica: parametrização da reta que contém o ponto A e é parelela ao vetor não nulo (B-A)
+
+\subsection{Parametrizações}
+\label{sec:org9972f03}
+Uma função vetorial é uma \uline{parametrização} da curva que é a imagem da função. Uma curva pode ser parametrizada de várias maneiras, como círculos.
+
+\subsection{Limites e Continuidade}
+\label{sec:orge684c6b}
+Resumidamente, para calcular limites de funções vetoriais, basta calcular o limite de cada função de coordenada separadamente.
+
+Da mesma forma, para verificar a continuidade da função vetorial, basta conferir que todas as funções de coordenadas sejam contínuas.
+
+\textbf{OBS:} Uma função é contínua quando em seu domínio:
+\begin{itemize}
+\item Não possui assíntotas verticais
+\item Não possui "furos"
+\item Não possui "pulos"
+\end{itemize}
+\end{document}

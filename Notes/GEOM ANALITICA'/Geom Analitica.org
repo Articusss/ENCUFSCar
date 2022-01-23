@@ -1,0 +1,63 @@
+#+STARTUP: indent
+#+STARTUP: overview
+#+STARTUP: show2levels
+#+TITLE: Geometria analítica
+#+SUBTITLE: /Anotações Práticas/
+#+AUTHOR: Vinicius Faria
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letterpaper]
+#+OPTIONS: toc:t
+#+SETUPFILE: /home/artixs/codigos/ENCUFSCar/Notes/startup.setup
+
+* Espaços vetoriais e subvetoriais
+** Espaços vetoriais
+Dado um conjunto V, V é um espaço vetorial real caso satisfazer as condições:
+*OBS:* Nas equações abaixo, $\forall x,y,z \in V$ e $\forall \alpha , \beta \in \realbb{R}$
+1. $x + y = y + x$ (Associatividade)
+2. $(x+y)+z = x + (y+z)$ (Comutatividade)
+3. $\exists \theta \in V \ / \ x + \theta = \theta + x = x$ (Existencia do vetor nulo)
+4. $-x \in V \ / \ x + (-x) = \theta$ (Elemento simétrico da soma)
+5. $\alpha (x+y) = \alpha x + \alpha y}$ (Distribuitividade)
+6. $(\alpha + \beta)x = \alpha x + \beta x$ (Distruibitividade)
+7. $(\alpha \beta) x = \alpha (\beta x)$ (Associatividade)
+8. $1x = x$ (Elemento neutro).
+
+Um espaço vetorial que contém os numeros complexos é denominado *espaço vetorial complexo*
+
+A partir das expressões acima, é possivel extrair as afirmações:
+ 1. $\alpha \theta = \theta$
+ 2. $0 \dotc x = \theta$
+ 3. $\alpha x = \theta , então \ \alpha = 0 \ ou \ x = \theta$
+ 4. $(-\alpha )x = \alpha(-x)$
+
+Alguns exemplos de espaços vetoriais, considerando operações normais:
+ + $V = K_n(x) = {P_r(x) / r \le n}$
+ + $V = C[a,b]$ *OBS:* $(f+g)(x) = f(x) + g(x)$ e $(\alpha f)(x) = \aplha f(x)$
+ + $V = \realbb{R}^n$
+ + $V = M_{mxn}$
+
+Não são espaços vetoriais:
+ + $V = \realbb{Z}$
+ + $V =$ Conjunto de polinômios de grau 3
+ + Alguns conjuntos com operações diferentes do normal. Ex: $\alpha x = \alpha (x_1, x_2) = (\alpha ^2 x_1, \alpha x_2)$
+   
+** Subespaços vetoriais
+*** Definições
+ Dentro de um espaço vetorial V, há subconjuntos W que são espaços vetoriais menores, contidos em V. *Todo espaço vetorial possui 2 subsespaços triviais:* Sub. nulo e ele mesmo.
+ Critérios para subespaços vetoriais:
+   1. $\theta \in W$
+   2. $\forall x, y \in W \rightarrow x + y \in W$
+   3. $\forall \alpha \in \realbb{R}, \forall x \in W \rightarrow \alpha x \in W$
+ São subespaços:
+  + Soluções lineares homogêneas
+  + Qualquer sistema que adote multiplicações/adições usual com a presença do vetor nulo
+ Não são subespaços:
+  + Geralmente sistemas com alguma multiplicação/adição fora do comum ou muito específicas (ex. Conjunto de polinomios de terceiro grau)
+  + $u + v = (u_1 , u_1^2) + (v_1, v_1^2)$
+*** Teoremas
+ *Interseccão de subespaços*. Dado $W_1 \  e \  W_2$ subespaços vetorias de V, $W_1 \cap W_2$ também é subconjunto de V. Ex - Matriz triangulares inferiores e superiores.
+
+ *Soma de subespaços*. Dado $W_1 \  e \  W_2$ subespaços vetoriais de V, $W_1 + W_2$ também é subconjunto de V. Caso $W_1 \cap W_2 = \theta$, a soma é chamada de *soma direta*, denotada por $W_1 \oplus W_2$
+
+
+* dasdqas

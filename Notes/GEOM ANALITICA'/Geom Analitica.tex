@@ -1,0 +1,122 @@
+% Created 2022-01-23 dom 02:58
+% Intended LaTeX compiler: pdflatex
+\documentclass[letterpaper, 11pt]{article}
+                      \usepackage{lmodern} % Ensures we have the right font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[table, xcdraw]{xcolor}
+\definecolor{bblue}{HTML}{0645AD}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{colorlinks, linkcolor=blue, urlcolor=bblue}
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage[stretch=10]{microtype}
+\usepackage{hyphenat}
+\usepackage{ragged2e}
+\usepackage{subfig} % Subfigures (not needed in Org I think)
+\usepackage{hyperref} % Links
+\usepackage{listings} % Code highlighting
+\usepackage[top=1in, bottom=1.25in, left=1.55in, right=1.55in]{geometry}
+\renewcommand{\baselinestretch}{1.15}
+\usepackage[explicit]{titlesec}
+\pretitle{\begin{center}\fontsize{20pt}{20pt}\selectfont}
+\posttitle{\par\end{center}}
+\preauthor{\begin{center}\vspace{-6bp}\fontsize{14pt}{14pt}\selectfont}
+\postauthor{\par\end{center}\vspace{-25bp}}
+\predate{\begin{center}\fontsize{12pt}{12pt}\selectfont}
+\postdate{\par\end{center}\vspace{0em}}
+\titlespacing\section{0pt}{5pt}{5pt} % left margin, space before section header, space after section header
+\titlespacing\subsection{0pt}{5pt}{-2pt} % left margin, space before subsection header, space after subsection header
+\titlespacing\subsubsection{0pt}{5pt}{-2pt} % left margin, space before subsection header, space after subsection header
+\usepackage{enumitem}
+\setlist{itemsep=-2pt} % or \setlist{noitemsep} to leave space around whole list
+\author{Vinicius Faria}
+\date{\today}
+\title{Geometria analítica\\\medskip
+\large \emph{Anotações Práticas}}
+\hypersetup{
+ pdfauthor={Vinicius Faria},
+ pdftitle={Geometria analítica},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Espaços vetoriais e subvetoriais}
+\label{sec:org01058a8}
+\subsection{Espaços vetoriais}
+\label{sec:orgee27a53}
+Dado um conjunto V, V é um espaço vetorial real caso satisfazer as condições:
+\textbf{OBS:} Nas equações abaixo, \(\forall x,y,z \in V\) e \(\forall \alpha , \beta \in \realbb{R}\)
+\begin{enumerate}
+\item \(x + y = y + x\) (Associatividade)
+\item \((x+y)+z = x + (y+z)\) (Comutatividade)
+\item \(\exists \theta \in V \ / \ x + \theta = \theta + x = x\) (Existencia do vetor nulo)
+\item \(-x \in V \ / \ x + (-x) = \theta\) (Elemento simétrico da soma)
+\item \(\alpha (x+y) = \alpha x + \alpha y}\) (Distribuitividade)
+\item \((\alpha + \beta)x = \alpha x + \beta x\) (Distruibitividade)
+\item \((\alpha \beta) x = \alpha (\beta x)\) (Associatividade)
+\item \(1x = x\) (Elemento neutro).
+\end{enumerate}
+
+Um espaço vetorial que contém os numeros complexos é denominado \textbf{espaço vetorial complexo}
+
+A partir das expressões acima, é possivel extrair as afirmações:
+\begin{enumerate}
+\item \(\alpha \theta = \theta\)
+\item \(0 \dotc x = \theta\)
+\item \(\alpha x = \theta , então \ \alpha = 0 \ ou \ x = \theta\)
+\item \((-\alpha )x = \alpha(-x)\)
+\end{enumerate}
+
+Alguns exemplos de espaços vetoriais, considerando operações normais:
+\begin{itemize}
+\item \(V = K_n(x) = {P_r(x) / r \le n}\)
+\item \(V = C[a,b]\) \textbf{OBS:} \((f+g)(x) = f(x) + g(x)\) e \((\alpha f)(x) = \aplha f(x)\)
+\item \(V = \realbb{R}^n\)
+\item \(V = M_{mxn}\)
+\end{itemize}
+
+Não são espaços vetoriais:
+\begin{itemize}
+\item \(V = \realbb{Z}\)
+\item \(V =\) Conjunto de polinômios de grau 3
+\item Alguns conjuntos com operações diferentes do normal. Ex: \(\alpha x = \alpha (x_1, x_2) = (\alpha ^2 x_1, \alpha x_2)\)
+\end{itemize}
+
+\subsection{Subespaços vetoriais}
+\label{sec:org0a66d2c}
+\subsubsection{Definições}
+\label{sec:org099642e}
+Dentro de um espaço vetorial V, há subconjuntos W que são espaços vetoriais menores, contidos em V. \textbf{Todo espaço vetorial possui 2 subsespaços triviais:} Sub. nulo e ele mesmo.
+Critérios para subespaços vetoriais:
+\begin{enumerate}
+\item \(\theta \in W\)
+\item \(\forall x, y \in W \rightarrow x + y \in W\)
+\item \(\forall \alpha \in \realbb{R}, \forall x \in W \rightarrow \alpha x \in W\)
+\end{enumerate}
+São subespaços:
+\begin{itemize}
+\item Soluções lineares homogêneas
+\item Qualquer sistema que adote multiplicações/adições usual com a presença do vetor nulo
+\end{itemize}
+Não são subespaços:
+\begin{itemize}
+\item Geralmente sistemas com alguma multiplicação/adição fora do comum ou muito específicas (ex. Conjunto de polinomios de terceiro grau)
+\item \(u + v = (u_1 , u_1^2) + (v_1, v_1^2)\)
+\end{itemize}
+\subsubsection{Teoremas}
+\label{sec:org84fa1ab}
+\textbf{Interseccão de subespaços}. Dado \(W_1 \  e \  W_2\) subespaços vetorias de V, \(W_1 \cap W_2\) também é subconjunto de V. Ex - Matriz triangulares inferiores e superiores.
+
+\textbf{Soma de subespaços}. Dado \(W_1 \  e \  W_2\) subespaços vetoriais de V, \(W_1 + W_2\) também é subconjunto de V. Caso \(W_1 \cap W_2 = \theta\), a soma é chamada de \textbf{soma direta}, denotada por \(W_1 \oplus W_2\)
+\end{document}

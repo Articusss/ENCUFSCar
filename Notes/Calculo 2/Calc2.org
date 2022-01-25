@@ -38,3 +38,59 @@ Da mesma forma, para verificar a continuidade da função vetorial, basta confer
   + Não possui assíntotas verticais
   + Não possui "furos"
   + Não possui "pulos"
+*OBS2:* $\Vert \alpha (t) \Vert$ denota o módulo do vetor.
+** Derivadas de funções vetoriais
+A derivada de uma função vetorial é interpretada como o *vetor tangente ao traço de $\alpha$ no ponto $\alpha(a)$*. Obtida por derivar cada coordenada separadamente
+
+\begin{center} $\alpha(t)' = (\alpha_1'(t), \alpha_2'(t),...)$ \end{center}
+
+Quando a derivada é $\theta$, gráfico apresenta uma "cúspide". Essa cúspide, no contexto de funções vetoriais, *não significa que a função é indiferenciável!!!* E sim que o vetor da derivada é equivalente ao vetor nulo.
+[[./img/cuspide.png]]
+
+*** Retas tangentes
+ Para calcular a reta tangente à função vetorial no ponto a, a derivada é a reta e as coordenadas de $\alpha$ no ponto a é o ponto inicial.
+
+\begin{center} $r(t) = t\alpha'(a) + \alpha(a)$ \end{center}
+
+No caso de *coordenadas polares* (tomada por comprimento e angulo de um vetor em vez de coordenadas usuais), utiliza-se:
+
+\begin{center} $\alpha(\theta) = (r(\theta)\cos\theta, r(\theta)\sin\theta)$ \end{center}
+
+*Exemplo:*
+
+$\alpha(t) = (t^2, 3t+1) \rightarrow \alpha'(t) = (2t, 3)$
+
+Então, a reta no ponto $t = -1$ será
+
+$t(2\cdot-1, 3) + ((-1)^2,3(-1)+1) \rightarrow (2t+1, 3t+4)$
+
+No geogebra:
+[[./img/tangente.png]]
+
+*Outro exemplo importante*
+
+Dado a curva $\alpha(t) = (t^3 +3t, t^2+4t)$, encontrar ponto(s) onde a curva é tangente à reta $r(t) = (3t+3,t-4)$
+
+Passo-a-passo: Derivar a curva, encontrar pontos em que essa derivada é paralela ao vetor diretor da reta, isto é: $\alpha'(t) = \lambda(3,1)$. Solucionar num sistema linear. (Gabarito $t = -1, t = 3$)
+
+** Integrais dey funções vetoriais
+Integrar uma função vetorial é feito da mesma maneira que na derivação: integrando um a um. Realizando a integração indefinida, obtemos a função primitiva de cada uma das coordenadas, sendo útil para descobrir a velocidade através da aceleração, por exemplo.
+Por outro lado, a integração definida resulta num vetor. Uma nomenclatura comum no caso da integração até $\realbb{R}^3$ é separar as coordenadas em $\vec{i}, \vec{j} \ e \ \vec{k}$ para representar x,y e z.
+
+\begin{center} $\int_{a}^{b} \alpha(t) \ dt = \int_{a}^{b} \alpha_1(t) \ dt \ \vec{\textbf{i}} + \int_{a}^{b} \alpha_2(t) \ dt \ \vec{\textbf{j}} +  \int_{a}^{b} \alpha_3(t) \ dt \ \vec{\textbf{k}}  $ \end{center}
+
+*** Comprimento de uma curva
+Tomando a ideia de módulo de vetores com o somatório da integral, levando em conto que $\alpha$ é uma função de classe $C^1$ (Continua e derivável em todos os pontos) tomamos a fórmula:
+
+\begin{center} $L(\alpha) = \int_{a}^{b} |\alpha'(t)| dt \ , \ |\alpha'(t)| = \sqrt{(\alpha_1'(t))^2 + (\alpha_2'(t))^2}$ \end{center}
+
+*** Curvas em coordenadas polares
+A fórmula do comprimento de uma curva dada, caso $r(\theta)$ seja de classe $C^1$, pela equação $r = r(\theta)$ é:
+
+\begin{center} $L =\int_{a}^{b} \sqrt{(\dfrac{dr}{d\theta})^2 + r^2 d\theta}$ \end{center}
+
+A fórmula da área da região delimitada por $0 \le r \le r(\theta), a < \theta < b$ é
+
+\begin{center} $A =\frac{1}{2} \int_{a}^{b} r(\theta)^2 d\theta$ \end{center}
+
+[[./img/areapolar.png]]

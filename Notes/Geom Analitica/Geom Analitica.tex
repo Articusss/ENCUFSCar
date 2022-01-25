@@ -1,4 +1,4 @@
-% Created 2022-01-23 dom 02:58
+% Created 2022-01-25 ter 15:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[letterpaper, 11pt]{article}
                       \usepackage{lmodern} % Ensures we have the right font
@@ -52,9 +52,9 @@
 
 
 \section{Espaços vetoriais e subvetoriais}
-\label{sec:org01058a8}
+\label{sec:org159721d}
 \subsection{Espaços vetoriais}
-\label{sec:orgee27a53}
+\label{sec:org9b8007f}
 Dado um conjunto V, V é um espaço vetorial real caso satisfazer as condições:
 \textbf{OBS:} Nas equações abaixo, \(\forall x,y,z \in V\) e \(\forall \alpha , \beta \in \realbb{R}\)
 \begin{enumerate}
@@ -94,9 +94,9 @@ Não são espaços vetoriais:
 \end{itemize}
 
 \subsection{Subespaços vetoriais}
-\label{sec:org0a66d2c}
+\label{sec:org0432817}
 \subsubsection{Definições}
-\label{sec:org099642e}
+\label{sec:org12d2fe6}
 Dentro de um espaço vetorial V, há subconjuntos W que são espaços vetoriais menores, contidos em V. \textbf{Todo espaço vetorial possui 2 subsespaços triviais:} Sub. nulo e ele mesmo.
 Critérios para subespaços vetoriais:
 \begin{enumerate}
@@ -115,8 +115,26 @@ Não são subespaços:
 \item \(u + v = (u_1 , u_1^2) + (v_1, v_1^2)\)
 \end{itemize}
 \subsubsection{Teoremas}
-\label{sec:org84fa1ab}
+\label{sec:orgba17d65}
 \textbf{Interseccão de subespaços}. Dado \(W_1 \  e \  W_2\) subespaços vetorias de V, \(W_1 \cap W_2\) também é subconjunto de V. Ex - Matriz triangulares inferiores e superiores.
 
 \textbf{Soma de subespaços}. Dado \(W_1 \  e \  W_2\) subespaços vetoriais de V, \(W_1 + W_2\) também é subconjunto de V. Caso \(W_1 \cap W_2 = \theta\), a soma é chamada de \textbf{soma direta}, denotada por \(W_1 \oplus W_2\)
+
+
+\section{Combinação linear}
+\label{sec:org85c55fe}
+Dado um espaço vetorial V, o vetor \(v \in V\) é considerado a combinação linear de \(v_1 + v_2 + ... v_n\) caso houver escalares \(\alpha_1 ... \alpha_n\) tais que:
+
+\begin{center} $v = \alpha_1v_1 + ... + \alpha_nv_n$ \end{center}
+
+Em exercícios envolvendo combinação linear, dado v e \(v_1 ... v_n\), colocar tudo em um sistema e resolver (escalonando ou manualmente). \textbf{Caso o sistema for possível e determinado, é uma combinação linear,
+caso contrário (por desigualdades depois de substituir valores, por exemplo) não é uma combinação linear}.
+
+Como exemplo, utilizando os vetores \(v_1 = (1,-1,3) \ e \ v_2 = (2,3,0)\) para a combinação linear, verificar se podem ser combinados para formar: \(u = (3,3,3) \ e \ v=(-2,-8,6)\).
+
+\begin{itemize}
+\item \(u\) não pode ser formado, pois, dependo da maneira que o sistema for resolvido \(\alpha_2 = 1\) ao mesmo tempo que \(\alpha_2 = \frac{4}{3}\), classificando o sistema como impossível.
+
+\item Agora, \(v\) é totalmente possível, pois ao escalonar ou tentar resolver o sistema claramente chegamos em \(\alpha_1 = 2\) e \(\alpha_2 = -2\).
+\end{itemize}
 \end{document}

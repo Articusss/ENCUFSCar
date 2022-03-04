@@ -9,6 +9,8 @@
 #+OPTIONS: toc:t
 #+SETUPFILE: /home/artixs/codigos/ENCUFSCar/Notes/startup.setup
 
+Esse pdf não possui propósito comercial, feito somente para fins educativos, foi baseado e contêm partes do livro: Calculo III - CEDERJ. Contato: artixsproductions@gmail.com
+
 * Funções Vetoriais
 Funções cuja imagem gerada é um vetor. $\realbb{R}^2 \ e \ \realbb{R}^3$ são chamadas *funções coordenadas* e t é denominado *variável livre*
 
@@ -40,7 +42,8 @@ Da mesma forma, para verificar a continuidade da função vetorial, basta confer
   + Não possui "pulos"
 *OBS2:* $\Vert \alpha (t) \Vert$ denota o módulo do vetor.
 ** Derivadas de funções vetoriais
-A derivada de uma função vetorial é interpretada como o *vetor tangente ao traço de $\alpha$ no ponto $\alpha(a)$*. Obtida por derivar cada coordenada separadamente
+A derivada de uma função vetorial é interpretada como o *vetor tangente ao traço de $\alpha$ no ponto $\alpha(a)$*. Obtida por derivar cada coordenada separadamente. *Podemos calcular*,
+*por exemplo, o ângulo entre 2 curvas em um dado ponto através do ângulo das 2 derivadas no dado ponto.*
 
 \begin{center} $\alpha(t)' = (\alpha_1'(t), \alpha_2'(t),...)$ \end{center}
 
@@ -52,7 +55,7 @@ Quando a derivada é $\theta$, gráfico apresenta uma "cúspide". Essa cúspide,
 
 \begin{center} $r(t) = t\alpha'(a) + \alpha(a)$ \end{center}
 
-No caso de *coordenadas polares* (tomada por comprimento e angulo de um vetor em vez de coordenadas usuais), utiliza-se:
+No caso de *coordenadas polares* (tomada por comprimento e angulo de um vetor em vez de coordenadas usuais), tomar como base, e depois procedir normalmente:
 
 \begin{center} $\alpha(\theta) = (r(\theta)\cos\theta, r(\theta)\sin\theta)$ \end{center}
 
@@ -73,7 +76,7 @@ Dado a curva $\alpha(t) = (t^3 +3t, t^2+4t)$, encontrar ponto(s) onde a curva é
 
 Passo-a-passo: Derivar a curva, encontrar pontos em que essa derivada é paralela ao vetor diretor da reta, isto é: $\alpha'(t) = \lambda(3,1)$. Solucionar num sistema linear. (Gabarito $t = -1, t = 3$)
 
-** Integrais dey funções vetoriais
+** Integrais de funções vetoriais
 Integrar uma função vetorial é feito da mesma maneira que na derivação: integrando um a um. Realizando a integração indefinida, obtemos a função primitiva de cada uma das coordenadas, sendo útil para descobrir a velocidade através da aceleração, por exemplo.
 Por outro lado, a integração definida resulta num vetor. Uma nomenclatura comum no caso da integração até $\realbb{R}^3$ é separar as coordenadas em $\vec{i}, \vec{j} \ e \ \vec{k}$ para representar x,y e z.
 
@@ -94,3 +97,202 @@ A fórmula da área da região delimitada por $0 \le r \le r(\theta), a < \theta
 \begin{center} $A =\frac{1}{2} \int_{a}^{b} r(\theta)^2 d\theta$ \end{center}
 
 [[./img/areapolar.png]]
+
+* Funções reais de várias variáveis
+** Duas variáveis
+Funções de 2 variáveis são do tipo $f: A \subset \realbb{R}^2 \rightarrow \realbb{R}$, cuja lei de definição tem a forma $z = f(x,y)$, com x e y variáveis independentes. A função gera um espaço tridimensional, muitas vezes formando curvas ou formas específicas.
+
+[[./img/2varex.png]]
+
+O seu domínio é bidimensional (pois não há z), determinado pelas regras usuais. Ex. Raiz quadrada >= 0, logaritmo > 0, etc.
+
+** Três ou mais variáveis
+Seu gráfico é $\realbb{R}^n$, com $n \ge 4$, portanto não são esboçáveis na mão. Porém, é possível esboçar domínios de funções de três variáveis, que resultam em um espaço tridimensional.
+
+Ex. $w = f(x,y,z) = \sqrt{4-x^2-y^2-z^2}$ tem o domínio $A =$ { $(x,y,z) \in \realbb{R}^3; x^2 + y^2 + z^2 \le 4}$ }. Que é equivalente aos pontos interiores de uma esfera de raio 2.
+
+** Gráficos de funçoes simples de 2 variáveis
+*** Superfícies quadráticas
+Parabolóides, elipsóides.. Ex: $f(x,y) = \sqrt{36-9x^2-4y^2}$, que resulta em $\frac{x^2}{4} + \frac{y^2}{9} + \frac{z^2}{36} = 1$, resultando em uma elipsóide com $z \ge 0$:
+
+[[./img/elipsoide.png]]
+
+*** Superfícies cilíndricas
+Funções em que há apenas x ou y. Plotar o gráfico normalmente e depois apenas extender ele ao longo do eixo (todos os planos da variável que falta)
+
+[[./img/cilindricas.png]]
+
+*** Superfícies de revolução
+Funções com forma de $z= f(x,y) = g(x^2+y^2)$. Para esboçar o gráfico, esboçar gráfico da função em $z=f(x,0)$ e girar a curva ao redor do eixo 0z
+
+[[./img/revolucao.png]]
+
+** Esboçando gráficos
+*** Funções g(x) ou h(y)
+As leis da forma $f(x,y) = g(x)$ ou $f(x,y) = h(y)$, são chamadas /invariantes/, uma vez que fixado um x ou y, alternar a outra coordenada nao altera a imagem. Assim:
+
+\begin{center} $(a,b+t, f(a,b) = (a,b+t,f(a,b+t))$ \end{center}
+
+Em termos gerais, é so montar um gráfico em $\mathbb{R}^2$ e "deslizar" a imagem para formar a superfície.
+
+[[./img/esbocar1.png]]
+
+*** Caso g(x) + h(y)
+No caso de funções $f(x,y) = g(x) + h(y)$, de forma que x e y são separaveis em duas parcelas, como $f(x,y) = x^2+\frac{y}{2} + 1$. Em termos gerais, observamos os casos $f(x,y) = (x,c)$ e
+$f(x,y) = (d,y)$, dado c e d constantes, e analisamos o gráfico em $\mathbb{R}^2$ para x e y separadamente. Assim, plotando os dois, "deslizamos" um gráfico sobre outro, criando o gráfico.
+
+[[./img/esbocar2.png]]
+
+** Conjuntos de nível
+Basicamente conjuntos que agrupam imagens iguais para uma mesma função.
+*** Conjunto de nível
+Quando temos uma função plana (de 1 variável) há apenas pontos representando elementos com a mesma imagem. Dado $f(x) = x^2+2x$ e o conjunto de nível ($f^{-1}(a)$), temos:
+
+\begin{center} $f^{-1}(3) = \{-1,3\}$ \end{center}
+
+Onde -1 e 3 possuem a mesma imagem, no caso 3.
+
+*** Curvas de nível
+Quando lidamos com conjuntos de nível em funções de 2 variável, obtemos /curvas de nível/, cuja imagem podem ser elementos em $\mathbb{R}^2$, como retas, circulos, pontos, etc. Assim,
+
+\begin{center} $f(x,y) = b$ \end{center}
+
+Assim, projetamos z=b,  e resolvemos o sistema no estilo de $z = f(x,y)$, obtendo um dos elementos descritos. Nesse caso, denominamos uma "Curva de nível b"
+
+Por exemplo, temos $f(x,y) = z = b = x^2 +y^2 -4y+2$. No caso de z=2, por exemplo, temos $4 = (x-2)^2 + y^2$, que resulta numa circuferência com centro em (2,0) e raio 2.
+
+[[./img/curvanivel.png]]
+
+Para um mesmo b, podem haver várias curvas de nível, como na equação $\frac{4x^2y}{x^4+y^2} = 1$.
+
+[[./img/nivelmultipla.png]]
+
+*** Superfícies de nível
+Para funções de 3 variáveis, dado $w = f(x,y,z) = x^2+y^2-z^2$, ou seja fixando um w, obtemos uma *superfície*, assim como observada na geometria analítica.
+
+No caso da equação dada, se $c<0$, resulta numa hiperbolóide de 2 folhas, $c=0$ num cone, e $c>0$ uma hiperbolóide de uma folha.
+
+[[./img/supnivel.png]]
+
+** Limites
+Exploramos agora limites de funções de 2 ou mais variáveis.
+
+*** Pontos de acmulação
+Determinar quais pontos são elegíveis para tomar o limite da função. Dado um ponto P em um conjunto D. Caso P estiver no mesmo ambiente $\mathbb{R}^n$ que D, ele pode ser um ponto de acumulação de D,
+mesmo que não necessariamente pertença ao seu conjunto. Imaginamos um "halo" em volta de P, se ele encosta em D, pode ser um ponto de acumulação. Não irei entrar em definições aqui, mas
+tem-se como exemplo:
+
+\begin{center} $P = (0,1,0), D = \{(x,y,z) \in \mathbb{R}^3; x^2 + y^2 > 1\}$, P é um ponto de acumulação. $\\ P=(0,0,0), D = \{(x,y,z) \in \mathbb{R}^3; x^2 + y^2 > 1\}$, P não é PA. \end{center}
+
+*** Limite de funções 2 ou mais variáveis
+Definição é a mesma, estruturalmente, do que a observada em limties de funções de uma variável.
+
+*** Propriedade dos limites
+As propriedades de limites também continuam as mesmas. Dado $\lim_{(x,y) \to (a,b)} f(x,y) = L$ e $\lim_{(x,y) \to (a,b)} g(x,y) = M$:
+
+[[./img/proplim.png]]
+
+*** Encontrando limites
+**** Coordenadas polares
+Em alguns casos, podemos converter x e y para coordenadas polares para chegar na resolução correta. Assim, $x = r \cos\theta, y= r\cos\theta, x^2 + y^2 = r^2$. Quando convertemos, aplicar o limite
+correto para r segundo a expressão anterior. Pode-se fazer L'Hopital e outras técnicas de integração de 1 variável. Por exemplo:
+
+\begin{center} $\lim_{(x,y) \to (0,0)} \frac{\sin xy}{\sqrt{x^2+y^2}} = lim_{r \to 0} \frac{\sin(r^2 \cos\theta \sin\theta}{r}$ \end{center}
+
+Assim, aplica-se L'hopital em r, e o resultado sera 0.
+**** Manipulação algébrica
+A primeira maneira de encontrar limites dessas funções seria a manipulação algébrica, de maneira que possibilite a substituição direta na função dada. Trabalhar com o denominador e
+propriedades para encontrar o resultado.
+
+**** Substituição
+[[./img/limsubst.png]]
+**** Teorema do confronto
+Em termos práticos, dado que g é função limitada, ou seja, $f(x,y) \le g(x,y) \le h(x,y)$ e os limites de f e h em $(a,b)$ sejam $L$, então: $\lim_{(x,y) \to (a,b)} g(x,y) = L$.
+
+\begin{center} $\lim_{(x,y) \to (0,0)} \frac{\sin(x+y)}{x+y} = 1$ \end{center}
+
+Outra adaptação desse teorema:
+Dado $\lim_{(x,y) \to (a,b)} f(x,y) = 0$, e $\exists M > 0, |g(x,y)| < M$, então, $\lim_{(x,y) \to (a,b)} f(x,y)g(x,y) = 0$.
+
+Como exemplo:
+
+\begin{center} $\lim_{(x,y) \to (0,0)} \frac{x^2y}{x^2+y^2} = 0$, pois: $\\ 0 \le x^2 \le x^2+y^2$ $\\ 0 \le \frac{x^2}{x^2 + y^2} \le 1$. Assim, $\\$ $|g(x,y)| =  \frac{x^2}{x^2+y^2} \le 1$. Como lim y = 0, temos que o limite é 0.
+
+*** Existência do limite
+Para confirmar a existência de limites dados, inserimos funções vetoriais. Assim, dado $\lim_{t \to t_o} \alpha_1(t) = (a,b) = \lim_{t \to t_0} \alpha_2(t)$, $\lim_{t \to t_o} f(\alpha_1(t) = \lim_{t \to t_o} f(\alpha_2(t) = L$,
+para o limite existir.
+
+Em termos praticos, dado $\lim_{(x,y) \to (a,b)} f(x,y)$, o limite deve ser o mesmo substituindo para diferentes funções vetoriais $\alpha(t)$ que resultam no mesmo vetor. Como $\alpha(t) = (t,b); \alpha_2(t) = (a,t), \alpha_3(t) = (\beta t, \gamma t)$, a primeira com t tendendo a a, e a segunda, a b, etc.
+
+Tomando o exemplo $f(x,y) = \frac{xy}{x^2+y^2}$:
+
+[[./img/exlim.png]]
+
+*OBS:* No caso de $f=(t,t)$ devemos manipular a funções das duas coordenadas para tornar t substituível sem indeterminações. Ex - $f(x) = \frac{xy^2}{x^4+y^4}$, fazemos $\alpha(t) = (t^2,t)$.
+
+Esse método de conferir deve-se ao fato de que, em funções de 2 ou mais variáveis, o limite deve ser o mesmo para os diversos "feixes" que aproximam em $(a.b)$, análogo aos limites laterais
+estudados em calculo I.
+
+** Continuidade
+Não há novidades no caso de Cálculo II. Dada a função $f: A \subset \mathbb{R}^2 \to \mathbb{R}$, ela será contínua no ponto $(a,b)$ de acumulação de A caso:
+ + $(a,b) \in A$
+ + $lim_{(x,y) \to (a,b)} = f(a,b)$
+
+Ou seja, o ponto deve pertencer ao domínio A da função. Para que a função seja contínua, todos os pontos devem ser contínuos.
+
+Dada uma função que possui um ponto indeterminado, ela pode se tornar contínua caso se torne composta, em que no ponto contínuo iguale a $c = \lim_{(x,y) \to (a,b)} f(x,y)$.
+
+*Teorema de composição:* Dada uma função de 2 variáveis $f(x,y)$, uma função $g(x)$ e uma função vetorial $\alpha (x)$, todas com intervalos também pertencentes a $f$, então $f \circ \alpha$ e $g \circ f$ são contínuas.
+
+ + $h(x,y) = sen(x+y)$ é contínua, pois $f(x,y) = x+y$ e $g(x) = sen(x)$ são contínuas, e $h = g \circ f(x,y)$
+ + $\alpha (t) = (t,2t)$ contínua e $f(x,y) = xy + 2x + y$ também contínua, $f(\alpha(t))$ é contínua.
+
+*Teorema da persistência do sinal:* Caso $f : A \subset \mathbb{R}^2 \to \mathbb{R}$ seja contínua, caso $(x_0, y_0)$ seja positivo, então o sinal de f permanece positivo em uma vizinhança de raio $r$ em torno do ponto.
+Ainda mais, dado que a função é contínua, se há um ponto negativo e outro positivo, também há um ponto em que a imagem é 0.
+** Derivadas parciais
+*** Conjuntos abertos
+Um subconjunto é considerado aberto se for um conjunto sem fronteiras ou bordas. Todos os seus pontos são interiores, ou seja existe um centro de disco aberto D de centro $(a,b)$ e raio
+$r > 0$ contido no domínio da função. Basicamente um conjunto aberto é um sem igualdade $(=)$,  ou seja conjuntos com $<,>,\ne#$.
+
+Ex: Em $y \ge 1$, o ponto $(1,2)$ é um ponto interior, já $(2,1)$ não é.
+
+*OBS:* O conjunto vazio é um conjunto aberto.
+
+*** Derivadas parciais
+Para derivar funções de 2 variáveis, derivamos parcialmente as equações, para x, y, z, etc. Derivando a função f em razão de x:
+
+\begin{center} $\frac{\partial f}{\partial x}(a,b) = \frac{\partial z}{\partial x} (a,b) = f_x(a,b)$. \end{center}
+
+Faz-se o mesmo para y, substituindo x por y nas denotações acima.
+
+*Para derivar parcialmente,* considerar a variável para que se está derivando como a variável, e as demais como constantes.
+
+\begin{center} $f(x,y) = x^2y, \frac{\partial f}{\partial x} = 2xy$ \end{center}
+
+Em algumas situações, necessita-se *da definição*, por exemplo, dado:
+
+\begin{center} $\begin{cases} (x^2+y^2) \sin (\frac{1}{x^2+y^2}) &\\  0, se (x,y) = (0,0)  \end{cases}$
+
+A derivada parcial de x e y devem ser equivalentes, e iguais a 0, para existirem.
+
+*** Interpretação geométrica
+A derivada parcial de f em relação à x, no ponto $(a,b)$ é o coeficiente angular da reta tangente à curva de interseção do plano com o gráfico f, no ponto $(a,b,f(a,b))$.
+
+
+*** Pontos críticos
+Assim como funções de 1 variável, os pontos críticos de uma função de 2 variáveis é onde *todas* suas derivada parciais são nulas. Por exemplo:
+
+\begin{center} $f(x,y) = 3xy - x^3 -y^3, \ f_x = 3y-3x^2=0, \ f_y = 3x -3y^2 =0$ \end{center}
+
+Resolvendo o sistema, temos que os pontos críticos da função são os pontos comum das parábolas $y=x^2$ e $x=y^2$.
+
+** Curvas de nível e funções homogêneas
+Como vimos anteriormente, para determinar curvas de nível, igualar $f(x,y) = c$ ou $f(x,y,z) = c$ e assim ir determinando as diversas curvas de nível. Geralmente, consideramos 3 situações:
+$c > 0, c = 0, c<0$ e esboçar as 3. Nos domínios é um processo semelhante, mas apenas com um gráfico.
+
+No caso das *funções homogêneas*, dado uma função $f(x,y)$ temos: $f(x,y) = f(tx,ty)$. Isso é, todos os pontos da forma $f(ta,tb)$ pertencêm à mesma curva de nível, o useja, um raio que parte da origem
+e contêm o ponto $(a,b)$. Por exemplo:
+
+\begin{center} $\frac{x^2}{x^2+y^2} = \frac{t^2x^2}{t^2x^2 + t^2y^2}$ \end{center}
+
+Além disso em uma função homogênea, $xf_x + yf_y = 0$.

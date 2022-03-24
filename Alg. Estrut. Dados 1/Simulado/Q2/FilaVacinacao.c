@@ -47,6 +47,10 @@ void insere(Node **FV, int idade){
             ante = atual;
             atual = atual->next;
         }
+
+        newnode->next = atual;
+        ante->next = newnode;
+        /*
         //Primeiro subcaso, ha pelo menos 1 pessoa mais nova do que o novo node na fila
         if(atual != *FV){
             //Inserindo o newnode entre os 2
@@ -57,7 +61,7 @@ void insere(Node **FV, int idade){
         else{
             ante->next = newnode;
             newnode->next = *FV;
-        }
+        }*/
     }
 }
 

@@ -18,7 +18,6 @@ struct Fila{
 
 typedef struct Fila Fila;
 
-
 Fila *criaFila(){
     //Criando a struct de fila
     Fila *temp;
@@ -29,8 +28,7 @@ Fila *criaFila(){
 }
 
 bool vazia(Fila *F){
-    //Nao sei pq ta assim
-    return (F->primeiro == NULL && F->ultimo == NULL) ? true : false;
+    return (F->primeiro == NULL && F->ultimo == NULL);
 }
 
 void empilha(Fila **F, int valor){
